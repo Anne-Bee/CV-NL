@@ -1,18 +1,21 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Anne Kreischer | Resume</title>
+  <title>Anne Kreischer | Frontend Developer</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-  <meta name="description" content="Cv van Anne Kreischer">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
 
-  <meta property="og:title" content="Cv van Anne Kreischer">
-  <meta property="og:type" content="Website">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <meta name="description" content="Cv van Anne Kreischer">
 
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" href="/icon.svg" type="image/svg+xml">
@@ -24,141 +27,294 @@
 
 <body>
 
-<header>
-  <h1>Anne Kreischer</h1>
-  <nav>
-    <ul>
-      <li><a href="#werkervaring">Werkervaring</a></li>
-      <li><a href="#opleidingen">Opleidingen</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#hobbies">Hobby's</a></li>
-    </ul>
-  </nav>
+<header class="navbar">
+  <div class="container">
+    <h1>Anne Kreischer</h1>
+    <nav>
+      <button class="mobile-menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#experience">Werkervaring</a></li>
+        <li><a href="#education">Opleidingen</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#hobbies">Hobby's</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <div class="profile-image">
+        <img src="./img/profilePicture.jpg" alt="ProfilePicture" width="320" height="320">
+      </div>
+      <div class="hero-info">
+        <h2>Anne Kreischer | Frontend Developer</h2>
+        <div class="contact-details">
+        <p><i class="fas fa-map-marker-alt"></i>Putten, Netherlands</p>
+        <p><i class="fas fa-calendar"></i>03 october 1991</p>
+        <p><i class="fas fa-phone"></i> +31624741186</p>
+        <p><i class="fas fa-envelope"></i> <a href="mailto:anne.kreischer@gmail.com">anne.kreischer@gmail.com</a></p>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-<div id="banner">
-  <div class="overlay">
-    <img class="profilePicture" src="./img/profilePicture.jpg" alt="ProfilePicture" width="320px" height="320px">
-    <div class="business-card">
+
+<section class="about">
+  <div class="container">
+    <div class="card">
+      <h3>Wie ben ik? </h3>
       <p>
-      <h2>Anne Kreischer</h2>
-      <p>Beginnend Frontend Developer</p>
-      <p>Adres: Putten, Netherlands</p>
-      <p>Geboortedatum: 03 october 1991</p>
-      <p>Telefoon: +31624741186</p>
-      <p>Email: <a href="anne.kreischer@gmail.com">anne.kreischer@gmail.com</a></p>
-    </div>
+        Een junior frontend developer met de focus op HTML, SCSS, JavaScript en TypeScript.
+        Door te werken aan diverse projecten, zowel persoonlijke als voor o.a. Bee Ideas, wil ik een sterk portfolio
+        opbouwen.
+        Met mijn achtergrond in maatschappelijk werk en de hippische sector heb ik sterke multitaskvaardigheden
+        ontwikkeld
+        en werk ik altijd klantgericht.
+        Ik werk graag zelfstandig, maar voel me ook helemaal op mijn plek in een Scrum-team.
+        Mensen kennen mij als vriendelijk, doelgericht, een doorzetter en een echte teamplayer.
+      </p>
     </div>
   </div>
+</section>
 
-
-<div class="content">
-
-  <div class="wieBenIk">
-    <h3>Wie ben ik? </h3>
-    <p>
-      Een junior frontend developer met de  focus  op HTML, SCSS, JavaScript en TypeScript.
-      Door te werken aan diverse projecten, zowel persoonlijke als voor o.a. Bee Ideas, wil ik een sterk portfolio opbouwen.
-      Met mijn achtergrond in maatschappelijk werk en de hippische sector heb ik sterke multitaskvaardigheden ontwikkeld en werk ik altijd klantgericht.
-      Ik werk graag zelfstandig, maar voel me ook helemaal op mijn plek in een Scrum-team.
-      Mensen kennen mij als vriendelijk, doelgericht, een doorzetter en een echte teamplayer.
-    </p>
-  </div>
-
-  <div id="werkervaring" class="werkervaring">
+<section id="experience" class="experience">
+  <div class="container">
     <h3>Werkervaring</h3>
-      <ul>
-        <li><b> Junior Frontend Developer</b> bij Bee Ideas (2024-present</li>
-        <li><b>Zelfstandig Hippisch Medewerker</b>(2020-present)</li>
-        <li><b>Leidinggevende horeca en evenmenten</b> bij Sportschool Richard de Bijl & Chita Gross (2014-2018)</li>
-        <li><b>Oproepkracht gehandicaptenzorg</b>  bij Stichting Zuidwester in Spijkenisse (2012-2014)</li>
-        <li><b>Oppas</b> bij verschillende gezinnnen (2009-2011)</li>
-        <li><b>Receptionist</b> bij Physiomotion in Rotterdam (2009-2010)</li>
-        <li><b>Kassamedewerker</b> bij Albert Heijn de Wolf in Rotterdam (2008-2009)</li>
-        <li><b>Verkoopassistent</b> bij Bart Smit Akkerhof in Spijkenisse (2006-2007)</li>
-      </ul>
-    <h3>Stages</h3>
-    <ul>
-      <li>Stage HBO-V, <b>Delta Psychiatrisch Ziekenhuis Hellevoetsluis,</b> Spoedopname (02/2013-05/2013)</li>
-      <li>Stage SPW, <b>Stichting Zuidwester in Spijkenisse,</b> Supervised Living Group (03/2012-06/2012)</li>
-      <li>Stage SPW, <b>Delta Psychiatrisch Ziekenhuis Portugaal,</b> Observatie groep (09/2011-02/2012)</li>
-      <li>Stage SPW, <b>Delta Psychiatrisch Ziekenhuis Rotterdam,</b> Langdurig Begeleid Wonen (09/2010-04/2011)</li>
-      <li>Stage SPW, <b>Stichting Orion in Rotterdam,</b> Dagbesteding paarden(09/2009-05/2010)</li>
-      <li>Stage SPW, <b>VSO de Hoge Brug in Rotterdam,</b> Voortgezet Speciaal Onderwijs(02/2009-07/2009: )</li>
-    </ul>
-  </div>
-
-
-  <div id="opleidingen" class="opleidingen">
-     <h3>Opleidingen</h3>
-    <ul>
-      <li>2012-2013 <b>HBO Verpleegkunde,</b> Hogeschool Rotterdam, 1 year</li>
-      <li>2008-2012 <b>MBO SPW-4 Woonbegeleiding,</b> Albeda College Rotterdam, diploma behaald</li>
-      <li>2004-2008 <b>VMBO-T,</b> C.S.G. Penta College Blaise Pascal, diploma behaald</li>
-    </ul>
-    <h3>Cursussen:</h3>
-    <ul>
-      <li>2024 <b>Software Validatie,</b> Vista College (mee bezig)</li>
-      <li>2023 <b>Online bootcamp IT,</b> Bee Ideas</li>
-      <li>2017 <b>SVH,</b> Sociale Hygiene MSH</li>
-      <li>2019 <b>EHBO paarden,</b> KNHS</li>
-    </ul>
-</div>
-
-  <div id="skills" class="skills">
-    <div class="skills-container">
-      <div class="hard-skills">
-    <h3>Hard Skills</h3>
-    <ul>
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>JavaScript</li>
-      <li>Typescript</li>
-      <li>Angular</li>
-      <li>Git</li>
-      <li>GitHub</li>
-      <li>Figma</li>
-      <li>Klantenservice</li>
-      <li>Stalbeheer</li>
-      <li>Microsoft Office</li>
-      <li>Zorgverlening</li>
-    </ul>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <h4>Frontend Developer</h4>
+          <p class="bedrijf">Bee Ideas</p>
+          <p class="periode">2024-present</p>
+        </div>
       </div>
-      <div class="soft-skills">
-    <h3>Soft Skills</h3>
-    <ul>
-      <li>Teamplayer</li>
-      <li>Vriendelijk</li>
-      <li>Probleemoplossend</li>
-      <li>Flexibel</li>
-      <li>Verantwoordelijk</li>
-      <li>Empathisch</li>
-      <li>Doelgericht</li>
-      <li>Doorzetter</li>
-    </ul>
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <h4>Zelfstandig Hippisch Medewerker</h4>
+          <p class="bedrijf">Verschillende prive- en pensionstallen</p>
+          <p class="periode">2024-present</p>
+        </div>
       </div>
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <h4>Diverse Zelfstandige Projecten ICT</h4>
+          <p class="bedrijf">Verschillende opdrachten/projecten</p>
+          <p class="periode">2018-heden</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <h4>Leidinggevende horeca en evenmenten</h4>
+          <p class="bedrijf">Sportschool Richard de Bijl & Chita Gross</p>
+          <p class="periode">2014-2018</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h4>Oproepkracht gehandicaptenzorg</h4>
+            <p class="bedrijf">Stichting Zuidwester</p>
+            <p class="periode">2012-2014</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h4>Oppas</h4>
+            <p class="bedrijf">Verschillende gezinnen </p>
+            <p class="periode">2009-2011</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h4>Receptionist</h4>
+            <p class="bedrijf">Physiomotion</p>
+            <p class="periode">2009-2010</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h4>Kassamedewerker</h4>
+            <p class="bedrijf">Albert Heijn</p>
+            <p class="periode">2008-2009</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h4>Verkoopassistent</h4>
+            <p class="bedrijf">Bart Smit Akkerhof</p>
+            <p class="periode">2006-2007</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
+</section>
+
+<section id="education" class="education">
+  <div class="container">
+    <div class="education-grid">
+      <div class="education-category">
+        <h3>Opleidingen</h3>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <h4>HBO Verpleegkunde</h4>
+              <p class="institution">Hogeschool Rotterdam</p>
+              <p class="period">2012-2013</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <h4>MBO SPW-4 Woonbegeleiding</h4>
+              <p class="institution">Albeda College Rotterdam</p>
+              <p class="period">2008-2012</p>
+              <p class="achievement">Diploma behaald</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <h4>VMBO-T</h4>
+              <p class="institution">C.S.G. Penta College Blaise Pascal</p>
+              <p class="period">2004-2008</p>
+              <p class="achievement">Diploma behaald</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="education-category">
+        <h4>Cursussen en Certifcaten</h4>
+        <div class="courses-grid">
+          <div class="course-card">
+            <div class="course-content">
+              <h5>Software Validatie</h5>
+              <p class="institution">Vista College</p>
+              <p class="period">2024 - Current</p>
+              <span class="status">In Progress</span>
+            </div>
+          </div>
+          <div class="course-card">
+            <div class="course-content">
+              <h5>Online Bootcamp IT</h5>
+              <p class="institution">Bee Ideas</p>
+              <p class="period">2023</p>
+              <span class="status completed">Completed</span>
+            </div>
+          </div>
+          <div class="course-card">
+            <div class="course-content">
+              <h5>SVH Sociale Hygiene</h5>
+              <p class="institution">MSH</p>
+              <p class="period">2017</p>
+              <span class="status completed">Completed</span>
+            </div>
+          </div>
+          <div class="course-card">
+            <div class="course-content">
+              <h5>EHBO Paarden</h5>
+              <p class="institution">KNHS</p>
+              <p class="period">2019</p>
+              <span class="status completed">Completed</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
-  <div id="hobbies" class="hobbies">
+<section id="skills" class="skills">
+  <div class="container">
+    <h3>Skills</h3>
+    <div class="skills-grid">
+      <div class="skills-category">
+        <h4>Technical Skills</h4>
+        <div class="tags">
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">TypeScript</span>
+          <span class="tag">Angular</span>
+          <span class="tag">Git</span>
+          <span class="tag">GitHub</span>
+          <span class="tag">Figma</span>
+          <span class="tag">Microsoft Office</span>
+        </div>
+      </div>
+      <div class="skills-category">
+        <h4>Hard Skills</h4>
+        <div class="tags">
+          <span class="tag">Scrum/agile</span>
+          <span class="tag">Klantgerichtheid</span>
+          <span class="tag">Multitasking</span>
+          <span class="tag">Tijdmanagement</span>
+          <span class="tag">Zelfstandig werken</span>
+          <span class="tag">Kritische denken</span>
+        </div>
+        <div class="skills-category">
+          <h4>Soft Skills</h4>
+          <div class="tags">
+            <span class="tag">Teamplayer</span>
+            <span class="tag">Verantwoordelijk</span>
+            <span class="tag">Flexibel</span>
+            <span class="tag">Empathisch</span>
+            <span class="tag">Doelgericht</span>
+            <span class="tag">Doorzetter</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="hobbies" class="hobbies">
+  <div class="container">
     <h3>Hobbies</h3>
-   <p>Naast mijn professionele bezigheden besteed ik graag tijd aan mijn hobby's.
-     Ik geniet van programmeren en het ontwikkelen van creatieve en technische oplossingen.
-     In mijn vrije tijd game ik om te ontspannen, rijd ik paard voor de verbondenheid met dieren,
-     en lees ik om mezelf te blijven ontwikkelen. Ook maak ik graag wandelingen met mijn hond, waarbij ik geniet van de natuur en beweging.</p>
+    <div class="hobbies-grid">
+      <div class="hobby-card">
+        <h4>Programming</h4>
+        <p>Ik geniet van programmeren en het ontwikkelen van creatieve en technische oplossingen.</p>
+      </div>
+
+      <div class="hobby-card">
+        <i class="fas fa-gamepad"></i>
+        <h4>Gaming</h4>
+        <p>In mijn vrije tijd game ik om te ontspannen.</p>
+      </div>
+
+      <div class="hobby-card">
+        <i class="fas fa-horse"></i>
+        <h4>Paardrijden</h4>
+        <p>Ik rijd paard om te ontspannen en actief bezig te zijn.</p>
+      </div>
+
+      <div class="hobby-card">
+        <i class="fas fa-book-reader"></i>
+        <h4>Lezen</h4>
+        <p>Ik lees om mezelf te blijven ontwikkelen.</p>
+      </div>
+
+      <div class="hobby-card">
+        <i class="fas fa-paw"></i>
+        <h4>Wandelen</h4>
+        <p>Ik maak graag wandelingen met mijn hond, waarbij ik geniet van de natuur en beweging.</p>
+      </div>
+    </div>
   </div>
+</section>
 
 
 <button id="backToTopBtn" class="back-to-top" aria-label="Back to Top">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <polyline points="18 15 12 9 6 15"></polyline>
-  </svg>
+  <i class="fas fa-chevron-up"></i>
 </button>
-</div>
-  <script src="js/app.js"></script>
 
+<script src="js/app.js"></script>
 </body>
-
 </html>

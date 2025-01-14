@@ -1,18 +1,30 @@
 /* Nordic Theme Variables */
 :root {
   /* Color Palette from Original Stylesheet */
-  --primary-color: #6D7993; /* lavender */
-  --secondary-color: #96858F; /* lilac */
-  --tertiary-color: #9099a2; /* grey */
-  --background-color: #D5D5D5; /* light grey */
-  --background-color-medium: rgb(189, 189, 193);
-  --font-color-dark: #202020;
-  --font-color-light: #D5D5D5;
+  --primary-color: #8BA39C; /* Header background */
+  --secondary-color: #671D2F; /* Accent color */
+  --primary-dark: #384743;
+  --primary-light: #d4dddb;
+  --background-color: #e5e9f0;
+  --background-color-light: #f3f4f6;
+  --font-color-dark: #111827;
+  --font-color-light: #f9fafb;
 
+  --gray-50: #f9fafb;
+  --gray-100: #f3f4f6;
+  --gray-200: #e5e7eb;
+  --gray-700: #374151;
+  --gray-800: #1f2937;
+  --gray-900: #111827;
+
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   /* Typography */
   --primary-font: "Raleway", sans-serif;
   --secondary-font: "Cormorant Garamond", serif;
 }
+
 
 * {
   box-sizing: border-box;
@@ -23,239 +35,356 @@
 body {
   font-family: "Raleway", sans-serif;
   line-height: 1.6;
-  background-color: var(--background-color);
+  background-color: var(--background-color-light);
   color: var(--font-color-dark);
+}
+
+.container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 100px 0 15px 0;
+  padding: 0 1.5rem;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-/* Header Styling */
-header {
+.navbar {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  right: 0;
+  background: var(--primary-color);
+  backdrop-filter: blur(8px);
   z-index: 1000;
-  background-color: var(--primary-color);
-  color: var(--font-color-light);
-  padding: 1rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.navbar .container {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  height: 4rem;
 }
 
-header h1 {
-  font-size: 2.5rem;
+.navbar h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
 }
-
-nav ul {
+ .nav-links {
   display: flex;
+  gap: 2rem;
   list-style: none;
-  gap: 1rem;
 }
 
-nav a {
-  color: var(--font-color-light);
+.nav-links a {
+  color: var(--gray-700);
   text-decoration: none;
-  transition: color 0.3s ease;
+  font-weight: 500;
+  transition: color 0.2s;
 }
 
-nav a:hover {
+.nav-links a:hover {
   color: var(--secondary-color);
 }
 
-/* Banner Section */
-#banner {
+.mobile-menu-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.5rem;
+}
+
+.mobile-menu-btn span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--primary-dark);
+  margin: 4px 0;
   position: relative;
-  background-color: var(--primary-color);
-  color: var(--font-color-light);
-  padding: 2rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  text-align: center;
-  border-radius: 0;
+  transition: 0.3s ;
 }
 
-#banner .overlay {
-  background-color: var(--tertiary-color);
-  border-radius: 10px;
-  padding: 1.5rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 1.5rem;
-  max-width: 90%;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+.hero {
+  padding: 8rem 0 4rem;
+  background: linear-gradient(to bottom right, #d4dddb, #f1f4f3);
 }
 
-.profilePicture {
-  max-width: 200px;
+.hero-content {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.profile-image img {
+  width: 200px;
   height: 200px;
+  border-radius: 50%;
   object-fit: cover;
-  border: 4px solid var(--font-color-light);
-  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  border: 2px solid var(--secondary-color);
 }
 
-.business-card {
-  color: var(--font-color-light);
-  text-align: center;
+.hero-info h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--font-color-dark)
 }
 
-.business-card a {
-  color: var(--font-color-light);
+.contact-details {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.contact-details p {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--font-color-dark);
+}
+
+.contact-details i {
+  color: var(--secondary-color);
+}
+
+.contact-details a{
+  color: var(--primary-color);
   text-decoration: none;
 }
 
-.business-card a:hover {
+.contact-details a:hover {
+  color: var(--secondary-color);
   text-decoration: underline;
 }
 
-/* Content Sections */
-.content > div {
-  background-image: linear-gradient(135deg, var(--nord9), var(--nord10));
-  margin: 1rem 0;
-  padding: 2rem;
-  border-radius: 8px;
-  width: 100%;
-}
+/*.nav-links a.active {*/
+/*  color: var(--secondary-color);*/
+/*}
 
-h3 {
-  color: var(--primary-color);
-  font-weight: bold;
-  border-bottom: 2px solid var(--secondary-color);
-  padding-bottom: 0.5rem;
-  margin-bottom: 1rem;
-}
 
-ul {
-  list-style-type: none;
-}
+ */
+/*html {*/
+/*  scroll-behavior: smooth;*/
+/*}*/
 
-.werkervaring li,
-.opleidingen li,
-.skills li {
-  margin-bottom: 0.5rem;
-  position: relative;
-  padding-left: 20px;
-}
+/*!* Header Styling *!*/
+/*header {*/
+/*  position: fixed;*/
+/*  top: 0;*/
+/*  left: 0;*/
+/*  width: 100%;*/
+/*  z-index: 1000;*/
+/*  background-color: var(--primary-color);*/
+/*  color: var(--font-color-light);*/
+/*  padding: 1rem;*/
+/*  display: flex;*/
+/*  flex-wrap: wrap;*/
+/*  justify-content: space-between;*/
+/*  align-items: center;*/
+/*  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);*/
+/*}*/
 
-.werkervaring li::before,
-.opleidingen li::before,
-.skills li::before {
-  content: '•';
-  color: var(--primary-color);
-  position: absolute;
-  left: 0;
-}
+/*header h1 {*/
+/*  font-size: 2.5rem;*/
+/*}*/
 
-.skills-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 2rem;
-}
+/*nav ul {*/
+/*  display: flex;*/
+/*  list-style: none;*/
+/*  gap: 1rem;*/
+/*}*/
 
-.hard-skills,
-.soft-skills {
-  flex: 1;
-  padding: 0 10px;
-}
+/*nav a {*/
+/*  color: var(--font-color-light);*/
+/*  text-decoration: none;*/
+/*  transition: color 0.3s ease;*/
+/*}*/
 
-.hard-skills h3, .soft-skills h3 {
-  color: var(--primary-color);
-  margin-bottom: 1rem;
-  border-bottom: 2px solid var(--secondary-color);
-  padding-bottom: 0.5rem;
-}
+/*nav a:hover {*/
+/*  color: var(--secondary-color);*/
+/*}*/
 
-.back-to-top {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: var(--primary-color);
-  color: var(--font-color-light);
-  border: none;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease;
-  z-index: 1000;
-}
+/*!* Banner Section *!*/
+/*#banner {*/
+/*  width: 100vw;*/
+/*  background-color: var(--primary-color);*/
+/*  color: var(--font-color-light);*/
+/*  padding: 2rem;*/
+/*  display: flex;*/
+/*  flex-wrap: wrap;*/
+/*  justify-content: center;*/
+/*  align-items: center;*/
+/*  gap: 5rem;*/
+/*  text-align: center;*/
+/*  border-radius: 0;*/
 
-.back-to-top svg {
-  width: 24px;
-  height: 24px;
-  stroke: var(--font-color-light);
-}
+/*}*/
 
-.back-to-top:hover {
-  background-color: var(--secondary-color);
-}
+/*#banner .overlay {*/
+/*  background: var(--tertiary-color);*/
+/*  border-radius: 10px;*/
+/*  padding: 1.5rem;*/
+/*  display: flex;*/
+/*  flex-wrap: wrap;*/
+/*  justify-content: center;*/
+/*  align-items: center;*/
+/*  gap: 1.5rem;*/
+/*  max-width: 90%;*/
+/*  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);*/
+/*}*/
 
-.back-to-top.show {
-  opacity: 1;
-  visibility: visible;
-}
+/*.profilePicture {*/
+/*  max-width: 200px;*/
+/*  height: 200px;*/
+/*  object-fit: cover;*/
+/*  border: 4px solid var(--font-color-light);*/
+/*  box-shadow: 0 4px 6px rgba(0,0,0,0.2);*/
+/*}*/
 
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-  header {
-    flex-direction: column;
-    text-align: center;
-    padding: 0.5rem;
-  }
+/*.business-card {*/
+/*  color: var(--font-color-light);*/
+/*  text-align: center;*/
+/*}*/
 
-  body {
-    padding-top: 225px;
-  }
+/*.business-card a {*/
+/*  color: var(--font-color-light);*/
+/*  text-decoration: none;*/
+/*}*/
 
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
+/*.business-card a:hover {*/
+/*  text-decoration: underline;*/
+/*}*/
 
-  #banner .overlay {
-    flex-direction: column;
-  }
+/*!* Content Sections *!*/
+/*.content > div {*/
+/*  background-color: var(--background-color);*/
+/*  margin: 1rem 0;*/
+/*  padding: 2rem;*/
+/*  border-radius: 8px;*/
+/*  width: 100vw;;*/
+/*}*/
 
-  .profilePicture {
-    max-width: 200px;
-  }
+/*h3 {*/
+/*  color: var(--font-color-dark);*/
+/*  font-weight: bold;*/
+/*  border-bottom: 2px solid var(--secondary-color);*/
+/*  padding-bottom: 0.5rem;*/
+/*  margin-bottom: 1rem;*/
+/*}*/
 
-  .skills-container {
-    flex-direction: column;
-  }
+/*ul {*/
+/*  list-style-type: none;*/
+/*}*/
 
-  .back-to-top {
-    width: 40px;
-    height: 40px;
-    bottom: 15px;
-    right: 15px;
-  }
+/*.werkervaring li,*/
+/*.opleidingen li,*/
+/*.skills li {*/
+/*  margin-bottom: 0.5rem;*/
+/*  position: relative;*/
+/*  padding-left: 20px;*/
+/*}*/
 
-  .back-to-top svg {
-    width: 20px;
-    height: 20px;
-  }
-}
+/*.werkervaring li::before,*/
+/*.opleidingen li::before,*/
+/*.skills li::before {*/
+/*  content: '•';*/
+/*  color: var(--primary-color);*/
+/*  position: absolute;*/
+/*  left: 0;*/
+/*}*/
+
+/*.skills-container {*/
+/*  display: flex;*/
+/*  flex-wrap: wrap;*/
+/*  justify-content: space-between;*/
+/*  gap: 2rem;*/
+/*}*/
+
+/*.hard-skills,*/
+/*.soft-skills {*/
+/*  flex: 1;*/
+/*  padding: 0 10px;*/
+/*}*/
+
+/*.hard-skills h3, .soft-skills h3 {*/
+/*  color: var(--primary-color);*/
+/*  margin-bottom: 1rem;*/
+/*  border-bottom: 2px solid var(--secondary-color);*/
+/*  padding-bottom: 0.5rem;*/
+/*}*/
+
+/*.back-to-top {*/
+/*  position: fixed;*/
+/*  bottom: 20px;*/
+/*  right: 20px;*/
+/*  background-color: var(--primary-color);*/
+/*  color: var(--font-color-light);*/
+/*  border: none;*/
+/*  border-radius: 50%;*/
+/*  width: 50px;*/
+/*  height: 50px;*/
+/*  display: flex;*/
+/*  align-items: center;*/
+/*  justify-content: center;*/
+/*  cursor: pointer;*/
+/*  box-shadow: 0 4px 6px rgba(0,0,0,0.1);*/
+/*  opacity: 0;*/
+/*  visibility: hidden;*/
+/*  transition: all 0.3s ease;*/
+/*  z-index: 1000;*/
+/*}*/
+
+/*.back-to-top svg {*/
+/*  width: 24px;*/
+/*  height: 24px;*/
+/*  stroke: var(--font-color-light);*/
+/*}*/
+
+/*.back-to-top:hover {*/
+/*  background-color: var(--secondary-color);*/
+/*}*/
+
+/*.back-to-top.show {*/
+/*  opacity: 1;*/
+/*  visibility: visible;*/
+/*}*/
+
+/*!* Responsive Design *!*/
+/*@media screen and (max-width: 768px) {*/
+/*  header {*/
+/*    flex-direction: column;*/
+/*    text-align: center;*/
+/*    padding: 0.5rem;*/
+/*  }*/
+
+/*  body {*/
+/*    padding-top: 225px;*/
+/*  }*/
+
+/*  nav ul {*/
+/*    flex-direction: column;*/
+/*    align-items: center;*/
+/*  }*/
+
+/*  #banner .overlay {*/
+/*    flex-direction: column;*/
+/*  }*/
+
+/*  .profilePicture {*/
+/*    max-width: 200px;*/
+/*  }*/
+
+/*  .skills-container {*/
+/*    flex-direction: column;*/
+/*  }*/
+
+/*  .back-to-top {*/
+/*    width: 40px;*/
+/*    height: 40px;*/
+/*    bottom: 15px;*/
+/*    right: 15px;*/
+/*  }*/
+
+/*  .back-to-top svg {*/
+/*    width: 20px;*/
+/*    height: 20px;*/
+/*  }*/
+/*}*/
 
 /*:root {*/
 /*  !* Polar Night *!*/
