@@ -1,3 +1,4 @@
+/* Nordic Theme Variables */
 :root {
   /* Color Palette from Original Stylesheet */
   --primary-color: #6D7993; /* lavender */
@@ -10,7 +11,7 @@
 
   /* Typography */
   --primary-font: "Raleway", sans-serif;
-  --secondary-font: 'Cormorant Garamond', serif;
+  --secondary-font: "Cormorant Garamond", serif;
 }
 
 * {
@@ -20,7 +21,7 @@
 }
 
 body {
-  font-family: var(--primary-font), sans-serif;
+  font-family: "Raleway", sans-serif;
   line-height: 1.6;
   background-color: var(--background-color);
   color: var(--font-color-dark);
@@ -47,11 +48,11 @@ header {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
 nav ul {
@@ -82,7 +83,7 @@ nav a:hover {
   align-items: center;
   gap: 2rem;
   text-align: center;
-  border-radius: 8px;
+  border-radius: 0;
 }
 
 #banner .overlay {
@@ -95,13 +96,12 @@ nav a:hover {
   align-items: center;
   gap: 1.5rem;
   max-width: 90%;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .profilePicture {
   max-width: 200px;
   height: 200px;
-  border-radius: 50%;
   object-fit: cover;
   border: 4px solid var(--font-color-light);
   box-shadow: 0 4px 6px rgba(0,0,0,0.2);
@@ -123,7 +123,7 @@ nav a:hover {
 
 /* Content Sections */
 .content > div {
-  background-color: var(--background-color-medium);
+  background-image: linear-gradient(135deg, var(--nord9), var(--nord10));
   margin: 1rem 0;
   padding: 2rem;
   border-radius: 8px;
@@ -166,9 +166,10 @@ ul {
   gap: 2rem;
 }
 
-.hard-skills, .soft-skills {
+.hard-skills,
+.soft-skills {
   flex: 1;
-  padding: 0 10px 0 10px;
+  padding: 0 10px;
 }
 
 .hard-skills h3, .soft-skills h3 {
@@ -221,9 +222,11 @@ ul {
     text-align: center;
     padding: 0.5rem;
   }
+
   body {
     padding-top: 225px;
   }
+
   nav ul {
     flex-direction: column;
     align-items: center;
@@ -236,9 +239,11 @@ ul {
   .profilePicture {
     max-width: 200px;
   }
+
   .skills-container {
     flex-direction: column;
   }
+
   .back-to-top {
     width: 40px;
     height: 40px;
@@ -251,4 +256,273 @@ ul {
     height: 20px;
   }
 }
+
+/*:root {*/
+/*  !* Polar Night *!*/
+/*  --nord0: #2e3440;*/
+/*  --nord1: #3b4252;*/
+/*  --nord2: #434c5e;*/
+/*  --nord3: #4c566a;*/
+
+/*  !* Snow Storm *!*/
+/*  --nord4: #d8dee9;*/
+/*  --nord5: #e5e9f0;*/
+/*  --nord6: #eceff4;*/
+
+/*  !* Frost *!*/
+/*  --nord7: #8fbcbb;*/
+/*  --nord8: #88c0d0;*/
+/*  --nord9: #81a1c1;*/
+/*  --nord10: #5e81ac;*/
+
+/*  !* Aurora *!*/
+/*  --nord11: #bf616a;*/
+/*  --nord12: #d08770;*/
+/*  --nord13: #ebcb8b;*/
+/*  --nord14: #a3be8c;*/
+/*  --nord15: #b48ead;*/
+
+/*  !* Typography *!*/
+/*  --primary-font: "Raleway", sans-serif;*/
+/*  --secondary-font: 'Cormorant Garamond', serif;*/
+/*}*/
+
+/** {*/
+/*  box-sizing: border-box;*/
+/*  margin: 0;*/
+/*  padding: 0;*/
+/*}*/
+
+/*body {*/
+/*  font-family: 'Raleway', sans-serif;*/
+/*  line-height: 1.6;*/
+/*  background-color: var(--nord0);*/
+/*  color: var(--nord6);*/
+/*  max-width: 1200px;*/
+/*  margin: 0 auto;*/
+/*  padding: 100px 0 15px 0;*/
+/*}*/
+
+/*html {*/
+/*  scroll-behavior: smooth;*/
+/*}*/
+
+/*!* Header Styling *!*/
+/*header {*/
+/*  position: fixed;*/
+/*  top: 0;*/
+/*  left: 0;*/
+/*  width: 100%;*/
+/*  z-index: 1000;*/
+/*  background-color: var(--nord1);*/
+/*  color: var(--nord6);*/
+/*  padding: 1rem;*/
+/*  display: flex;*/
+/*  flex-wrap: wrap;*/
+/*  justify-content: space-between;*/
+/*  align-items: center;*/
+/*  box-shadow: 0 2px 5px rgba(0,0,0,0.1);*/
+/*}*/
+
+/*header h1 {*/
+/*  font-size: 2rem;*/
+/*}*/
+
+/*nav ul {*/
+/*  display: flex;*/
+/*  list-style: none;*/
+/*  gap: 1rem;*/
+/*}*/
+
+/*nav a {*/
+/*  color: var(--nord1);*/
+/*  text-decoration: none;*/
+/*  transition: color 0.3s ease;*/
+/*}*/
+
+/*nav a:hover {*/
+/*  color:  var(--nord9);*/
+/*}*/
+
+/*!* Banner Section *!*/
+/*#banner {*/
+/*  position: relative;*/
+/*  background-color: var(--primary-color);*/
+/*  color: var(--font-color-light);*/
+/*  padding: 2rem;*/
+/*  display: flex;*/
+/*  flex-wrap: wrap;*/
+/*  justify-content: center;*/
+/*  align-items: center;*/
+/*  gap: 2rem;*/
+/*  text-align: center;*/
+/*  border-radius: 0px;*/
+/*}*/
+
+/*#banner .overlay {*/
+/*  background-color: var(--tertiary-color);*/
+/*  border-radius: 10px;*/
+/*  padding: 1.5rem;*/
+/*  display: flex;*/
+/*  flex-wrap: wrap;*/
+/*  justify-content: center;*/
+/*  align-items: center;*/
+/*  gap: 1.5rem;*/
+/*  max-width: 90%;*/
+/*  box-shadow: 0 4px 6px rgba(0,0,0,0.2);*/
+/*}*/
+
+/*.profilePicture {*/
+/*  max-width: 200px;*/
+/*  height: 200px;*/
+/*  border-radius: 50%;*/
+/*  object-fit: cover;*/
+/*  border: 4px solid var(--font-color-light);*/
+/*  box-shadow: 0 4px 6px rgba(0,0,0,0.2);*/
+/*}*/
+
+/*.business-card {*/
+/*  color: var(--font-color-light);*/
+/*  text-align: center;*/
+/*}*/
+
+/*.business-card a {*/
+/*  color: var(--font-color-light);*/
+/*  text-decoration: none;*/
+/*}*/
+
+/*.business-card a:hover {*/
+/*  text-decoration: underline;*/
+/*}*/
+
+/*!* Content Sections *!*/
+/*.content > div {*/
+/*  background-color: var(--background-color-medium);*/
+/*  margin: 1rem 0;*/
+/*  padding: 2rem;*/
+/*  border-radius: 8px;*/
+/*  width: 100%;*/
+/*}*/
+
+/*h3 {*/
+/*  color: var(--primary-color);*/
+/*  font-weight: bold;*/
+/*  border-bottom: 2px solid var(--secondary-color);*/
+/*  padding-bottom: 0.5rem;*/
+/*  margin-bottom: 1rem;*/
+/*}*/
+
+/*ul {*/
+/*  list-style-type: none;*/
+/*}*/
+
+/*.werkervaring li,*/
+/*.opleidingen li,*/
+/*.skills li {*/
+/*  margin-bottom: 0.5rem;*/
+/*  position: relative;*/
+/*  padding-left: 20px;*/
+/*}*/
+
+/*.werkervaring li::before,*/
+/*.opleidingen li::before,*/
+/*.skills li::before {*/
+/*  content: '•';*/
+/*  color: var(--primary-color);*/
+/*  position: absolute;*/
+/*  left: 0;*/
+/*}*/
+
+/*.skills-container {*/
+/*  display: flex;*/
+/*  flex-wrap: wrap;*/
+/*  justify-content: space-between;*/
+/*  gap: 2rem;*/
+/*}*/
+
+/*.hard-skills, .soft-skills {*/
+/*  flex: 1;*/
+/*  padding: 0 10px 0 10px;*/
+/*}*/
+
+/*.hard-skills h3, .soft-skills h3 {*/
+/*  color: var(--primary-color);*/
+/*  margin-bottom: 1rem;*/
+/*  border-bottom: 2px solid var(--secondary-color);*/
+/*  padding-bottom: 0.5rem;*/
+/*}*/
+
+/*.back-to-top {*/
+/*  position: fixed;*/
+/*  bottom: 20px;*/
+/*  right: 20px;*/
+/*  background-color: var(--primary-color);*/
+/*  color: var(--font-color-light);*/
+/*  border: none;*/
+/*  border-radius: 50%;*/
+/*  width: 50px;*/
+/*  height: 50px;*/
+/*  display: flex;*/
+/*  align-items: center;*/
+/*  justify-content: center;*/
+/*  cursor: pointer;*/
+/*  box-shadow: 0 4px 6px rgba(0,0,0,0.1);*/
+/*  opacity: 0;*/
+/*  visibility: hidden;*/
+/*  transition: all 0.3s ease;*/
+/*  z-index: 1000;*/
+/*}*/
+
+/*.back-to-top svg {*/
+/*  width: 24px;*/
+/*  height: 24px;*/
+/*  stroke: var(--font-color-light);*/
+/*}*/
+
+/*.back-to-top:hover {*/
+/*  background-color: var(--secondary-color);*/
+/*}*/
+
+/*.back-to-top.show {*/
+/*  opacity: 1;*/
+/*  visibility: visible;*/
+/*}*/
+
+/*!* Responsive Design *!*/
+/*@media screen and (max-width: 768px) {*/
+/*  header {*/
+/*    flex-direction: column;*/
+/*    text-align: center;*/
+/*    padding: 0.5rem;*/
+/*  }*/
+/*  body {*/
+/*    padding-top: 225px;*/
+/*  }*/
+/*  nav ul {*/
+/*    flex-direction: column;*/
+/*    align-items: center;*/
+/*  }*/
+
+/*  #banner .overlay {*/
+/*    flex-direction: column;*/
+/*  }*/
+
+/*  .profilePicture {*/
+/*    max-width: 200px;*/
+/*  }*/
+/*  .skills-container {*/
+/*    flex-direction: column;*/
+/*  }*/
+/*  .back-to-top {*/
+/*    width: 40px;*/
+/*    height: 40px;*/
+/*    bottom: 15px;*/
+/*    right: 15px;*/
+/*  }*/
+
+/*  .back-to-top svg {*/
+/*    width: 20px;*/
+/*    height: 20px;*/
+/*  }*/
+/*}*/
 
